@@ -4,6 +4,11 @@
 
 <script>
 export default {
+    head(){
+        return{
+            title: this.user.name ,
+        }
+    },
     //ユーザーデータを仮で作成（本当はaxiosなどでAPIを使いバックエンドから取得）
     data() {
         return{

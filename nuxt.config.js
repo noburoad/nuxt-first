@@ -3,13 +3,14 @@ export default {
   mode: 'universal',
   head: {
     title: 'nuxt-first',
+    titleTemplate : "%s | Nuxt-first",
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '初めてのNuxt.js練習中' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

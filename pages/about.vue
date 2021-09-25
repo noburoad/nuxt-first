@@ -13,6 +13,16 @@ export default {
                 subtitle: 'サブタイトルです'
             }
         },
+    head(){
+        return {
+            title: 'アバウトページだよん',
+            meta: [
+                {
+                    hid: 'discription', name: 'discription', content: 'アバウトページです'
+                }
+            ]
+        }
+    }
 };
 
 </script>
