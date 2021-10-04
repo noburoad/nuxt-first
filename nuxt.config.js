@@ -21,6 +21,9 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
+  //Customize the progress-bar color
+
+  loading: { color: '#FF8733' },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -40,7 +43,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://jsonplaceholder.typicode.com/'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

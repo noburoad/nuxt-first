@@ -3,7 +3,7 @@
         <h1>記事一覧</h1>
         <ul>
             <li v-for="post in posts" :key=post.id>
-                {{ post.title }}
+                <nuxt-link :to=" '/posts/' + post.id ">{{ post.title }}</nuxt-link>
             </li>
         </ul>
     </div>
@@ -11,13 +11,13 @@
 <script>
 import axios from 'axios'
 export default {
-    async asyncData(){
+    async asyncData(context){
         //asyncとawaitを使用してサーバーで処理してからクライアントへ返すようにしている
-        const responsePost = await
-            axios.get('https://jsonplaceholder.typicode.com/posts/')
-        const responseUser = await
-            axios.get('https://jsonplaceholder.typicode.com/users/')
-        return { posts: responsePost.data, users: responseUser.data }
+        //nuxt.config.jsのbaseURLにjsonplaceholderのURLを記述してるのでパスを/posts/にできる
+        const posts = await context.$axios.$get('/posts/')
+
+        const users = await context.$axios.$get('/users/')
+        return { posts, users }
     },
     // data(){
     //     return{

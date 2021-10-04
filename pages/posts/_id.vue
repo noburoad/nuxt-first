@@ -7,15 +7,19 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
-    async asyncData({ params }){
+    async asyncData({ params, $axios }){
         // console.log(context)
-        const { data } = await
-        axios.get('https://jsonplaceholder.typicode.com/posts/' + params.id)
-        return {post: data }
+        const  post  = await $axios.$get('/posts/' + params.id)
+        // console.log(post)
+        return { post }
+        
     },
+    head(){
+        return{
+            title: this.post.title,
+        }
+    }
 }
-
 </script>
