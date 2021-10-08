@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    { src: 'assets/sass/default.scss', lang: 'scss' },
   ],
   //Customize the progress-bar color
 
