@@ -22,6 +22,9 @@ export default {
   css: [
     { src: 'assets/sass/default.scss', lang: 'scss' },
   ],
+  script: [
+    { src: 'common.js' }
+  ],
   //Customize the progress-bar color
 
   loading: { color: '#FF8733' },
@@ -50,5 +53,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true,
+  },
+  target: {
+    target: 'static'
   }
 }
